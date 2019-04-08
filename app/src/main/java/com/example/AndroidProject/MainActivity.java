@@ -5,12 +5,13 @@ import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.parse.Parse;
 import com.parse.ParseInstallation;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +39,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(in);
     }
 
+    public void Button_Feedback (View v){
+        Intent fb = new Intent(this, FeedbackPage.class);
+        startActivity(fb);
+    }
 
 
     public void Button_SignIn(View v){
         Intent sn = new Intent(this,SignInPage.class);
         startActivity(sn);
     }
+
 }
